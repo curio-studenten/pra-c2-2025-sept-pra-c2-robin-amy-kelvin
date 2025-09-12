@@ -10089,3 +10089,8 @@ body {
 .footer {
     background: #3490dc !important;
 }
+.footer-inner {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1200px;
+}
