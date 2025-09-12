@@ -1,7 +1,8 @@
 
 <footer>
-	<div class="footer">
-    <p>©{{ __('misc.copyright') }}</p>
+	<footer class="footer">
+  <div class="footer-inner">
+    <p class="copyright">&copy; 2022 Bedrijf 4S. Alle rechten voorbehouden.</p>
   </div>
 </footer>
 
