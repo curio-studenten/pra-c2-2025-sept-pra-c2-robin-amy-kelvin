@@ -10047,7 +10047,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #3490dc; /* Same as .navbar.bg-primary */
+    background-color: #343a40; /* Same as .navbar.bg-primary */
     color: #fff; /* Contrasting text */
     position: relative;
     bottom: 0;
@@ -10086,9 +10086,6 @@ body {
 }
 
 /* Remove old background if present */
-.footer {
-    background: #3490dc !important;
-}
 .footer-inner {
   margin: 0 auto;
   text-align: center;
