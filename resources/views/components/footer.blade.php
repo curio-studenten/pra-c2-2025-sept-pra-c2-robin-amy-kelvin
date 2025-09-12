@@ -1,7 +1,7 @@
 
 <footer>
 	<div class="footer">
-    <p>© {{ __('misc.copyright') }}</p>
+    <p>©{{ __('misc.copyright') }}</p>
   </div>
 </footer>
 
@@ -26,5 +26,4 @@
  if (top.location!= self.location) { 
   top.location = self.location.href
  } 
- 
 </script>
