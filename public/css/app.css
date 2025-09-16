@@ -10036,6 +10036,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 .main-content {
@@ -10057,9 +10059,10 @@ body {
 
 
 .footer .footer-inner {
-
     padding: 1em 15px;
     text-align: center;
+    max-width: none;
+    margin: 0;
 }
 
 
@@ -10084,12 +10087,12 @@ body {
     letter-spacing: 0.02em;
 }
 
-
-.footer-inner {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 1200px;
+i{
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
 }
+
 .jumbotron h1{
     font-size: 45px;
     font-weight: bold;
@@ -10099,8 +10102,9 @@ body {
 .container .row .col-md-4{
     background-color: #D3D3D3;
 }
+
 .container .row .col-md-4 a{
-     font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
@@ -10116,17 +10120,8 @@ body {
     color: #f1f1f1;
 }
 
-.container .row .col-md-4::after{
-    content: '';
-    position: absolute;
-    bottom: -2px; 
-    left: 0;
-    width: 0; 
-    height: 2px; 
-    background-color: white; 
-    transition: width 0.4s ease; 
-}
-
-.container .row .col-md-4 a:hover::after{
-    width: 90%;
+.socials{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
 }
