@@ -3,7 +3,7 @@
   <div class="footer-inner">
     <p class="copyright">&copy; 2022 Bedrijf 4S. Alle rechten voorbehouden.</p>
     <h6>Adres:</h6>
-    <h6></h6>
+    <h6>Postcode</h6>
     <div class="socials">
       <a href="#"><i class="fa-brands fa-instagram"></i></a>
       <a href=""><i class="fa-brands fa-tiktok"></i></a>
