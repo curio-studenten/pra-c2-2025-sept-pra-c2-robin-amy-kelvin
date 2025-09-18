@@ -3,8 +3,9 @@
   <div class="footer-inner">
     <p class="copyright">&copy; 2022 Bedrijf 4S. Alle rechten voorbehouden.</p>
     <div class="about-us">
-      <h6>Adres:</h6>
-      <h6>Postcode</h6>
+      <h6>Adres: testlaan 12</h6>
+      <h6>Postcode 6784 JC</h6>
+      <h6>Tel: 06 865637 </h6>
     </div>
     <div class="socials">
       <a href="#"><i class="fa-brands fa-instagram"></i></a>

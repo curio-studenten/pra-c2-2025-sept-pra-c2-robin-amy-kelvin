@@ -10044,13 +10044,12 @@ body {
     flex: 1 0 auto;
 }
 
-
 .footer {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #343a40; /* Same as .navbar.bg-primary */
-    color: #fff; /* Contrasting text */
+    background-color: #343a40; 
+    color: #fff; 
     position: relative;
     bottom: 0;
     left: 0;
