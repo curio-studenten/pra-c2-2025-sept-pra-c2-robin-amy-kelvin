@@ -13,6 +13,14 @@
 
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
+    @if(isset($popularManuals) && $popularManuals->count() > 0)
+        <h2>Top 5 populairste handleidingen</h2>
+        <ul>
+            @foreach ($popularManuals as $manual)
+                <li>[{{ $manual->name }}]</li>
+            @endforeach
+        </ul>
+    @endif
 
         @foreach ($manuals as $manual)
 
