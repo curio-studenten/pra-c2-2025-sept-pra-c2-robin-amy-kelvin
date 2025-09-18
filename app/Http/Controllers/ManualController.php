@@ -13,9 +13,9 @@ class ManualController extends Controller
         $brand = Brand::findOrFail($brand_id);
         $manual = Manual::findOrFail($manual_id);
 
-        return view('pages/manual_view', [
-            "manual" => $manual,
-            "brand" => $brand,
-        ]);
+        $manual->timesVisited++;
+        $manual->save();
+
+        return view('pages\redirectPage', ['url' => $manual->originUrl]);
     }
 }
