@@ -12,6 +12,22 @@
         </x-slot:title>
     </h1>
 
+    @if($topManuals->count() > 0)
+    <h2>Top 10 Handleidingen</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    @foreach($topManuals as $manual)
+                        <li>
+                            <a href="/{{ $manual->brand->id }}/{{ $manual->brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/">{{ $manual->brand->name }}: {{ $manual->name }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+    @endif
 
     <?php
     $size = count($brands);
