@@ -10027,20 +10027,6 @@ a.text-dark:hover, a.text-dark:focus {
     content: "/ ";
 }
 
-
-/* --- Custom Footer Styling --- */
-html, body {
-    height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
 .main-content {
     flex: 1 0 auto;
 }
@@ -10068,16 +10054,24 @@ body {
 
 
 @media (max-width: 1199.98px) {
-    .footer .footer-inner { max-width: 960px; }
+    .footer .footer-inner { 
+        max-width: 960px; 
+    }
 }
 @media (max-width: 991.98px) {
-    .footer .footer-inner { max-width: 720px; }
+    .footer .footer-inner { 
+        max-width: 720px; 
+    }
 }
 @media (max-width: 767.98px) {
-    .footer .footer-inner { max-width: 540px; }
+    .footer .footer-inner {
+        max-width: 540px; 
+    }
 }
 @media (max-width: 575.98px) {
-    .footer .footer-inner { max-width: 100%; }
+    .footer .footer-inner { 
+        max-width: 100%; 
+    }
 }
 
 
@@ -10116,15 +10110,14 @@ i{
     font-style: normal;
 }
 
+.container .row .col-md-4 a:hover{
+    color: #f1f1f1;
+}
+
 .about-us{
     display: flex;
     flex-direction: column;
     text-align: left;
-}
-
-
-.container .row .col-md-4 a:hover{
-    color: #f1f1f1;
 }
 
 .socials{
