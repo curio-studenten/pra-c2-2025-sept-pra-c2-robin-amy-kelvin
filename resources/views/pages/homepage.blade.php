@@ -38,30 +38,39 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
+            @php
+            // Groepeer alle merken per eerste letter
+            $brandsByLetter = $brands->groupBy(function($brand) {
+                return strtoupper(substr($brand->name, 0, 1));
+            })->sortKeys();
+            @endphp
 
-            @foreach($brands->chunk($chunk_size) as $chunk)
-                <div class="col-md-4">
+            @foreach($brandsByLetter as $letter => $brandsChunk)
+                <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-link text-decoration-none w-100 text-start"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse-{{ $letter }}"
+                                aria-expanded="false"
+                                aria-controls="collapse-{{ $letter }}">
+                            {{ $letter }}
+                        </button>
+                    </div>
 
-                    <ul>
-                        @foreach($chunk as $brand)
-
-                            <?php
-                            $current_first_letter = strtoupper(substr($brand->name, 0, 1));
-
-                            if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
-                                echo '</ul>
-						<h2>' . $current_first_letter . '</h2>
-						<ul>';
-                            }
-                            $header_first_letter = $current_first_letter
-                            ?>
-
-                            <li>
-                                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-
+                    <div id="collapse-{{ $letter }}" class="collapse">
+                        <ul class="list-group list-group-flush">
+                            @foreach($brandsChunk as $brand)
+                                <li class="list-group-item">
+                                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">
+                                        {{ $brand->name }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
                 </div>
                 <?php
                 unset($header_first_letter);
@@ -69,7 +78,7 @@
             @endforeach
 
         </div>
-        
+
 
     </div>
 </x-layouts.app>
