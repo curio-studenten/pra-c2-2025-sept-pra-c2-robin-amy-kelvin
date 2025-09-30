@@ -94,16 +94,27 @@
 
 
     </div>
-     <!-- Alphabetical Menu -->
-+    <div class="container mb-4">
-+        <div class="row">
-+            <div class="col-12">
-+                <div class="d-flex flex-wrap justify-content-center">
-+                    @for ($letter = 'A'; $letter <= 'Z'; $letter++)
-+                        <a href="#collapse-{{ $letter }}" class="btn btn-outline-primary btn-sm m-1 letter-link" data-letter="{{ $letter }}">{{ $letter }}</a>
-+                    @endfor
-+                </div>
-+            </div>
-+        </div>
-+    </div>
+    <script>
++        document.addEventListener('DOMContentLoaded', function() {
++            const letterLinks = document.querySelectorAll('.letter-link');
++
++            letterLinks.forEach(link => {
++                link.addEventListener('click', function(e) {
++                    e.preventDefault();
++                    const letter = this.getAttribute('data-letter');
++                    const target = document.getElementById('collapse-' + letter);
++
++                    if (target) {
++                        // Scroll to the target
++                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
++
++                        // Expand the collapse
++                        const bsCollapse = new bootstrap.Collapse(target, {
++                            show: true
++                        });
++                    }
++                });
++            });
++        });
++    </script>
 </x-layouts.app>
