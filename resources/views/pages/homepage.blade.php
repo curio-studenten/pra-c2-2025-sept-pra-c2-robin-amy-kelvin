@@ -94,27 +94,5 @@
 
 
     </div>
-    <script>
-+        document.addEventListener('DOMContentLoaded', function() {
-+            const letterLinks = document.querySelectorAll('.letter-link');
-+
-+            letterLinks.forEach(link => {
-+                link.addEventListener('click', function(e) {
-+                    e.preventDefault();
-+                    const letter = this.getAttribute('data-letter');
-+                    const target = document.getElementById('collapse-' + letter);
-+
-+                    if (target) {
-+                        // Scroll to the target
-+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-+
-+                        // Expand the collapse
-+                        const bsCollapse = new bootstrap.Collapse(target, {
-+                            show: true
-+                        });
-+                    }
-+                });
-+            });
-+        });
-+    </script>
+   
 </x-layouts.app>
