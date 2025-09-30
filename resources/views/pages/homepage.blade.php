@@ -29,6 +29,19 @@
     </div>
     @endif
 
+     <!-- Alphabetical Menu -->
++    <div class="container mb-4">
++        <div class="row">
++            <div class="col-12">
++                <div class="d-flex flex-wrap justify-content-center">
++                    @for ($letter = 'A'; $letter <= 'Z'; $letter++)
++                        <a href="#collapse-{{ $letter }}" class="btn btn-outline-primary btn-sm m-1 letter-link" data-letter="{{ $letter }}">{{ $letter }}</a>
++                    @endfor
++                </div>
++            </div>
++        </div>
++    </div>
+
     <?php
     $size = count($brands);
     $columns = 3;
@@ -81,4 +94,16 @@
 
 
     </div>
+     <!-- Alphabetical Menu -->
++    <div class="container mb-4">
++        <div class="row">
++            <div class="col-12">
++                <div class="d-flex flex-wrap justify-content-center">
++                    @for ($letter = 'A'; $letter <= 'Z'; $letter++)
++                        <a href="#collapse-{{ $letter }}" class="btn btn-outline-primary btn-sm m-1 letter-link" data-letter="{{ $letter }}">{{ $letter }}</a>
++                    @endfor
++                </div>
++            </div>
++        </div>
++    </div>
 </x-layouts.app>
