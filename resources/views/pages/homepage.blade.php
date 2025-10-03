@@ -29,7 +29,12 @@
     </div>
     @endif
 
-    
+    {{-- Alfabetisch selectiemenu --}}
+    <div class="alphabet-menu" style="margin-bottom: 20px;">
+        @foreach(range('A', 'Z') as $letter)
+            <a href="#brand-{{ $letter }}" style="margin-right: 8px;">{{ $letter }}</a>
+        @endforeach
+    </div>
 
     <?php
     $size = count($brands);
