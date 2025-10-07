@@ -18,6 +18,7 @@
                 <li><a href="/" title="{{ __('misc.home_alt') }}"
                        alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>
                 {{ $breadcrumb ?? '' }}
+                <a href="/type">Categorieën</a>
             </ul>
 
             @if ( isset($_GET['q']) )
@@ -30,6 +31,7 @@
                 <li>
 					<a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>
 				</li>
+
                 {{ $breadcrumb ?? '' }}
             </ul>'
         </div>

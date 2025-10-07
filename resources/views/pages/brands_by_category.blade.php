@@ -1,4 +1,6 @@
-<h2>Merken in categorie: {{ $type }}</h2>
+<x-layouts.app>
+
+    <h2>Merken in categorie: {{ $type }}</h2>
 
 <ul>
     @foreach($brands as $brand)
@@ -9,3 +11,7 @@
 
     @endforeach
 </ul>
+
+</x-layouts.app>
+
+
