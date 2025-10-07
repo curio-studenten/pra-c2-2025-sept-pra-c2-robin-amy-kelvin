@@ -1,4 +1,5 @@
-
+<x-layouts.app>
+  
 <h2>Alle Categorieën</h2>
 
 <ul>
@@ -8,3 +9,5 @@
     </li>
     @endforeach
 </ul>
+
+</x-layouts.app>

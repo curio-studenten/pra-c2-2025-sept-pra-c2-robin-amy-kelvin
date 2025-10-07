@@ -4,6 +4,8 @@
         <a href="/" title="{{ __('misc.home_alt') }}" alt="{{ __('misc.home_alt') }}">
             <h1>{{ __('misc.homepage_title') }}</h1>
         </a>
+        <a href="type"></a>
         {{ $introduction_text ?? '' }}
+
     </div>
 </div>
