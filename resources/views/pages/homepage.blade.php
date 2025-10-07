@@ -13,7 +13,7 @@
     </h1>
 
 
-    
+
     @if($topManuals->count() > 0)
     <h2>Top 10 Handleidingen</h2>
     <div class="container">
@@ -31,10 +31,20 @@
     </div>
     @endif
 
+    @php
+    $brandsByLetter = $brands->groupBy(function($brand) {
+        return strtoupper(substr($brand->name, 0, 1));
+    })->sortKeys();
+    @endphp
+
     {{-- Alfabetisch selectiemenu --}}
     <div class="alphabet-menu" style="margin-bottom: 20px;">
         @foreach(range('A', 'Z') as $letter)
-            <a href="#brand-{{ $letter }}" style="margin-right: 8px;">{{ $letter }}</a>
+             @if($brandsByLetter->has($letter))
+                <a href="#brand-{{ $letter }}" class="alphabet-link" style="margin-right: 8px;" data-letter="{{ $letter }}">{{ $letter }}</a>
+            @else
+                <span class="alphabet-disabled" style="margin-right: 8px; color: #bbb; cursor: default;">{{ $letter }}</span>
+            @endif
         @endforeach
     </div>
 
@@ -47,15 +57,10 @@
     <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-            @php
-            // Groepeer alle merken per eerste letter
-            $brandsByLetter = $brands->groupBy(function($brand) {
-                return strtoupper(substr($brand->name, 0, 1));
-            })->sortKeys();
-            @endphp
+
 
             @foreach($brandsByLetter as $letter => $brandsChunk)
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" id="brand-{{ $letter }}">
                 <div class="card">
                     <div class="card-header">
                         <button class="btn btn-link text-decoration-none w-100 text-start"
@@ -86,9 +91,7 @@
                 ?>
             @endforeach
 
-        </div>
-
-
     </div>
-   
+    
+</div>
 </x-layouts.app>
