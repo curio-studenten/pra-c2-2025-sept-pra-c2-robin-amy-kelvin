@@ -12,6 +12,8 @@
         </x-slot:title>
     </h1>
 
+
+    
     @if($topManuals->count() > 0)
     <h2>Top 10 Handleidingen</h2>
     <div class="container">
@@ -29,6 +31,8 @@
     </div>
     @endif
 
+
+  
     <?php
     $size = count($brands);
     $columns = 3;
